@@ -1,0 +1,43 @@
+{
+  "name": "little-dashboard",
+  "description": "Dashboard UI",
+  "main": "index.js",
+  "version": "0.0.0",
+  "browserify": {
+    "transform": []
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-js": "browserify -d browser/main.js > public/bundle.js",
+    "watch-js": "watchify browser/main.js -o public/bundle.js -dv",
+    "build-sass": "node-sass src/style/main.scss > public/style.css",
+    "watch-sass": "node-sass --watch src/style/main.scss public/style.css",
+    "dev": "npm run watch-js & npm run watch-sass & npm run server",
+    "server": "node server.js",
+    "demo": "browserify browser/main.js > public/bundle.js && html-inline public/index.html | curl -sT- https://htmlb.in"
+  },
+  "author": "Nick Thomas <nichoth@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nichoth/little-dashboard.git"
+  },
+  "license": "ISC",
+  "peerDependencies": {},
+  "devDependencies": {
+    "browserify": "^11.2.0",
+    "ecstatic": "^1.1.0",
+    "node-sass": "^3.3.3",
+    "parallelshell": "^2.0.0",
+    "watchify": "^3.4.0"
+  },
+  "dependencies": {
+    "catch-links": "^2.0.0",
+    "main-loop": "^3.2.0",
+    "normalize.css": "^3.0.3",
+    "routes": "^2.1.0",
+    "single-page": "^1.0.0",
+    "vdom-sidebar": "0.0.3",
+    "virtual-dom": "^2.1.1",
+    "xtend": "^4.0.0"
+  }
+}

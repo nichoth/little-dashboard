@@ -1,0 +1,110 @@
+/**
+ * Loading spinner
+ */
+@keyframes spin {
+  to {
+    transform: rotate(1turn); } }
+
+.progress {
+  position: relative;
+  display: inline-block;
+  width: 5em;
+  height: 5em;
+  margin: 0 0.5em;
+  font-size: 12px;
+  text-indent: 999em;
+  overflow: hidden;
+  animation: spin 1s infinite steps(8); }
+
+.small.progress {
+  font-size: 6px; }
+
+.large.progress {
+  font-size: 24px; }
+
+.progress:before,
+.progress:after,
+.progress > div:before,
+.progress > div:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 2.25em;
+  /* (container width - part width)/2  */
+  width: .5em;
+  height: 1.5em;
+  border-radius: .2em;
+  background: #eee;
+  box-shadow: 0 3.5em #eee;
+  /* container height - part height */
+  transform-origin: 50% 2.5em;
+  /* container height / 2 */ }
+
+.progress:before {
+  background: #555; }
+
+.progress:after {
+  transform: rotate(-45deg);
+  background: #777; }
+
+.progress > div:before {
+  transform: rotate(-90deg);
+  background: #999; }
+
+.progress > div:after {
+  transform: rotate(-135deg);
+  background: #bbb; }
+
+.progress {
+  position: relative;
+  top: 8px;
+  display: inline-block; }
+
+/* vdom-sidebar */
+.vdom-sidebar {
+  position: fixed;
+  left: 0;
+  display: block;
+  width: 240px;
+  height: 100%;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* Scrollable contents if viewport is shorter than content. */
+  background-color: gray; }
+
+ul.vdom-sidebar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  ul.vdom-sidebar-nav > li {
+    list-style-type: none;
+    position: relative; }
+    ul.vdom-sidebar-nav > li:after {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 5px;
+      height: 100%;
+      content: "";
+      background: white; }
+    ul.vdom-sidebar-nav > li.active {
+      background: pink; }
+      ul.vdom-sidebar-nav > li.active:after {
+        display: block; }
+    ul.vdom-sidebar-nav > li:hover:after {
+      display: block; }
+    ul.vdom-sidebar-nav > li a, ul.vdom-sidebar-nav > li button {
+      width: 100%;
+      text-align: left;
+      border: 0 none transparent;
+      background: transparent;
+      display: block;
+      font-size: 20px;
+      color: #FFF;
+      padding: 18px 20px;
+      text-decoration: none;
+      white-space: nowrap;
+      font-weight: 300; }
+
