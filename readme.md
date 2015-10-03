@@ -1,3 +1,19 @@
 # little dashboard
 
-Dashboard UI like for a cms
+Dashboard UI 
+
+
+## Install 
+
+    $ npm install
+
+
+## Develop
+
+    $ npm run dev
+
+Open `localhost:8000`
+
+## Build
+
+    $ npm run build
