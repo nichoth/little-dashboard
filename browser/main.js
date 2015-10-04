@@ -38,7 +38,7 @@ var items = {
 
 bus.on('route', function(state) {
   state.items = items;
-  console.log(state);
+  console.log('route event', state);
   loop.update( App(state) );
 });
 

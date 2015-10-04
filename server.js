@@ -14,9 +14,11 @@ function appRoute(req, res) {
     .pipe(res);
 }
 
+// spa routes
 router.addRoute('/videos', appRoute);
 router.addRoute('/articles', appRoute);
 router.addRoute('/photos', appRoute);
+
 
 http.createServer(function(req, res) {
 
