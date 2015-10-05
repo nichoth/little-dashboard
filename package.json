@@ -32,8 +32,12 @@
   },
   "dependencies": {
     "catch-links": "^2.0.0",
+    "lodash.map": "^3.1.4",
     "main-loop": "^3.2.0",
     "normalize.css": "^3.0.3",
+    "observ": "^0.2.0",
+    "observ-struct": "^6.0.0",
+    "observ-varhash": "^1.0.6",
     "routes": "^2.1.0",
     "single-page": "^1.0.0",
     "vdom-sidebar": "0.0.3",

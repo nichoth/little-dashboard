@@ -3,6 +3,8 @@ var mainLoop = require('main-loop');
 var url = require('url');
 var catchLinks = require('catch-links');
 var singlePage = require('single-page');
+var observStruct = require('observ-struct');
+var observVarhash = require('observ-varhash');
 
 var EventEmitter = require('events').EventEmitter;
 var bus = new EventEmitter();
@@ -36,13 +38,20 @@ var items = {
   }
 };
 
-bus.on('route', function(state) {
-  state.items = items;
-  console.log('route event', state);
-  loop.update( App(state) );
+var state = observVarhash({
+  app: App()
 });
 
-var loop = mainLoop({}, App.render, vdom);
+var loop = mainLoop(state(), render, vdom);
+state(loop.update);
 document.getElementById('content').appendChild(loop.target);
 
-emit('route', {});
+bus.on('route', function(newState) {
+  newState.items = items;
+  console.log('route event', newState);
+  state.put('app', App(newState));
+});
+
+function render(state) {
+  return App.render(state.app);
+}
