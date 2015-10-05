@@ -42,7 +42,7 @@ bus.on('route', function(state) {
   loop.update( App(state) );
 });
 
-var loop = mainLoop({}, App.render, vdom);
+var loop = mainLoop(App(), App.render, vdom);
 document.getElementById('content').appendChild(loop.target);
 
 emit('route', {});
