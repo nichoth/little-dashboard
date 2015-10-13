@@ -30,18 +30,18 @@ var s = state({
 });
 
 router.on('route', function(data) {
-
   var activeItem = data.activeItem;
   var renderFn = data.renderFn;
   var page = data.page;
 
-  s.app.set( App({
-    items: items,
-    activeItem: activeItem,
-    renderFn: renderFn,
-    page: page
-  })() );
-
+  s.set({
+    app: App({
+      items: items,
+      activeItem: activeItem,
+      renderFn: renderFn,
+      page: page
+    })()
+  });
 });
 
 

@@ -37,9 +37,11 @@
     "main-loop": "^3.2.0",
     "normalize.css": "^3.0.3",
     "observ": "^0.2.0",
+    "observ-array": "^3.2.1",
     "observ-struct": "^6.0.0",
     "routes": "^2.1.0",
     "single-page": "^1.0.0",
+    "vdom-input": "0.0.7",
     "vdom-sidebar": "0.0.3",
     "virtual-dom": "^2.1.1",
     "xtend": "^4.0.0"
