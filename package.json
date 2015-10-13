@@ -13,7 +13,7 @@
     "build-sass": "node-sass src/style/main.scss > public/style.css",
     "watch-sass": "node-sass --watch src/style/main.scss public/style.css",
     "dev": "npm run watch-js & npm run watch-sass & npm run server",
-    "server": "node server.js",
+    "server": "nodemon server.js",
     "demo": "browserify browser/main.js > public/bundle.js && html-inline public/index.html | curl -sT- https://htmlb.in"
   },
   "author": "Nick Thomas <nichoth@gmail.com>",

@@ -15,6 +15,7 @@ function appRoute(req, res) {
 }
 
 router.addRoute('/videos', appRoute);
+router.addRoute('/videos/new', appRoute);
 router.addRoute('/articles', appRoute);
 router.addRoute('/photos', appRoute);
 
