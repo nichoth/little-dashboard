@@ -34,14 +34,13 @@ router.on('route', function(data) {
   var renderFn = data.renderFn;
   var page = data.page;
 
-  s.set({
-    app: App({
+  s.app.set( App({
       items: items,
       activeItem: activeItem,
       renderFn: renderFn,
       page: page
     })()
-  });
+  );
 });
 
 

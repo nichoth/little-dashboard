@@ -13,7 +13,7 @@
     "build-sass": "node-sass src/style/main.scss > public/style.css",
     "watch-sass": "node-sass --watch src/style/main.scss public/style.css",
     "dev": "npm run watch-js & npm run watch-sass & npm run server",
-    "server": "nodemon server.js",
+    "server": "node server.js",
     "demo": "browserify browser/main.js > public/bundle.js && html-inline public/index.html | curl -sT- https://htmlb.in"
   },
   "author": "Nick Thomas <nichoth@gmail.com>",
@@ -30,7 +30,7 @@
     "watchify": "^3.4.0"
   },
   "dependencies": {
-    "@nichoth/state": "0.0.0",
+    "@nichoth/state": "0.0.2",
     "catch-links": "^2.0.0",
     "lodash.map": "^3.1.4",
     "lodash.reduce": "^3.1.2",
@@ -41,6 +41,7 @@
     "observ-struct": "^6.0.0",
     "routes": "^2.1.0",
     "single-page": "^1.0.0",
+    "vdom-form-field": "0.0.2",
     "vdom-input": "0.0.7",
     "vdom-sidebar": "0.0.3",
     "virtual-dom": "^2.1.1",
