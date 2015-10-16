@@ -5,20 +5,20 @@ var mainLoop = require('main-loop');
 // var router = require('../lib/routes')( document.getElementById('content') );
 var App = require('../lib/App.js');
 
-var items = {
-  videos: {
-    href: '/videos',
-    itemName: 'videos'
-  },
-  articles: {
-    href: '/articles',
-    itemName: 'articles'
-  },
-  photos: {
-    href: '/photos',
-    itemName: 'photos'
-  }
-};
+// var items = {
+//   videos: {
+//     href: '/videos',
+//     itemName: 'videos'
+//   },
+//   articles: {
+//     href: '/articles',
+//     itemName: 'articles'
+//   },
+//   photos: {
+//     href: '/photos',
+//     itemName: 'photos'
+//   }
+// };
 
 // var app = App({items: items});
 
