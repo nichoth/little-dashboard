@@ -2,12 +2,12 @@ var ecstatic = require('ecstatic')({root: __dirname + '/public'});
 var http = require('http');
 var fs = require('fs');
 var router = require('routes')();
-var foreach = require('lodash.foreach');
 
-var wsock = require('websocket-stream');
+// var wsock = require('websocket-stream');
+var shoe = require('shoe');
 var multilevel = require('multilevel');
 
-var db = require('./data/db.js');
+var db = require('./data/db.js')();
 
 router.addRoute('/api/:name', function(req, res, params) {
   res.setHeader("Content-Type", "text/html");
@@ -20,8 +20,15 @@ function appRoute(req, res) {
     .pipe(res);
 }
 
+var routes = [
+  '/videos',
+  '/photos',
+  '/articles',
+  '/videos/new'
+];
+
 // serve static app at all routes
-foreach( require('./lib/route-hash.js'), function(fn, routeStr) {
+routes.forEach(function(routeStr) {
   router.addRoute(routeStr, appRoute);
 });
 
@@ -40,9 +47,15 @@ console.log('listening on :8000');
 
 
 
-wsock.createServer({ server: server }, function(stream) {
+// websockets
+var sock = shoe(function(stream) {
   stream.pipe( multilevel.server(db) ).pipe(stream);
 });
+sock.install(server, '/sock');
+
+// wsock.createServer({ server: server }, function(stream) {
+//   stream.pipe( multilevel.server(db) ).pipe(stream);
+// });
 
 
 
