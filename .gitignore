@@ -83,3 +83,4 @@ node_modules
 bundle.js
 bower_components/
 public/style.css
+data/db/
