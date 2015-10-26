@@ -1,10 +1,12 @@
 {
   "name": "little-dashboard",
   "description": "Dashboard UI",
-  "main": "index.js",
+  "main": "server.js",
   "version": "0.0.0",
   "browserify": {
-    "transform": []
+    "transform": [
+      "babelify"
+    ]
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -24,24 +26,32 @@
   "license": "ISC",
   "peerDependencies": {},
   "devDependencies": {
+    "babelify": "^6.4.0",
     "browserify": "^11.2.0",
-    "ecstatic": "^1.1.0",
     "node-sass": "^3.3.3",
-    "routes": "^2.1.0",
     "watchify": "^3.4.0"
   },
   "dependencies": {
     "@nichoth/router": "0.0.0",
     "@nichoth/state": "0.0.2",
     "catch-links": "^2.0.0",
+    "ecstatic": "^1.1.0",
     "form-data-set": "^2.0.0",
+    "keymirror": "^0.1.1",
+    "level": "^1.3.0",
+    "level-live-stream": "^1.4.11",
+    "lodash.foreach": "^3.0.3",
     "lodash.map": "^3.1.4",
     "lodash.reduce": "^3.1.2",
     "main-loop": "^3.2.0",
+    "multilevel": "^7.2.0",
     "normalize.css": "^3.0.3",
     "observ": "^0.2.0",
     "observ-array": "^3.2.1",
     "observ-struct": "^6.0.0",
+    "observ-varhash": "^1.0.6",
+    "routes": "^2.1.0",
+    "shoe": "0.0.15",
     "single-page": "^1.0.0",
     "vdom-form-field": "0.0.2",
     "vdom-input": "0.0.7",
