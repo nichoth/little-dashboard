@@ -49,6 +49,7 @@
     "observ": "^0.2.0",
     "observ-array": "^3.2.1",
     "observ-struct": "^6.0.0",
+    "observ-varhash": "^1.0.6",
     "routes": "^2.1.0",
     "shoe": "0.0.15",
     "single-page": "^1.0.0",
