@@ -53,6 +53,7 @@
     "routes": "^2.1.0",
     "shoe": "0.0.15",
     "single-page": "^1.0.0",
+    "vdom-form": "0.0.0",
     "vdom-form-field": "0.0.2",
     "vdom-input": "0.0.7",
     "vdom-sidebar": "0.0.3",
