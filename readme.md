@@ -3,15 +3,11 @@
 Dashboard UI made with `virtual-dom`.
 
 
-## install
-
-    $ npm install
-
-
 ## develop
 
-Start a server at localhost:8000 and watch files for changes
+Start a server at `localhost:8000` and watch files for changes
 
+    $ npm install
     $ npm run dev
 
 

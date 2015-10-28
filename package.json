@@ -34,7 +34,6 @@
   "dependencies": {
     "@nichoth/router": "0.0.0",
     "@nichoth/state": "0.0.2",
-    "catch-links": "^2.0.0",
     "ecstatic": "^1.1.0",
     "form-data-set": "^2.0.0",
     "keymirror": "^0.1.1",
@@ -52,7 +51,6 @@
     "observ-varhash": "^1.0.6",
     "routes": "^2.1.0",
     "shoe": "0.0.15",
-    "single-page": "^1.0.0",
     "vdom-form": "0.0.0",
     "vdom-form-field": "0.0.2",
     "vdom-input": "0.0.7",
