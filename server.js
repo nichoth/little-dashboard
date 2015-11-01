@@ -24,7 +24,8 @@ var routes = [
   '/videos',
   '/photos',
   '/articles',
-  '/videos/new'
+  '/videos/new',
+  '/videos/:id'
 ];
 
 // serve static app at all routes
