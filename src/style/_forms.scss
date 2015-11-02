@@ -1,3 +1,41 @@
 button:disabled {
   color: gray;
 }
+
+.main-form {
+  button {
+    float: right;
+  }
+}
+
+.vdom-form {
+  background-color: whitesmoke;
+  margin-bottom: 1em;
+  padding: 1em;
+}
+.vdom-form-field {
+  padding: 1em;
+  background-color: whitesmoke;
+  margin-bottom: 1em;
+  label, input {
+    display: inline-block;
+    // width: 48%;
+    font-size: 1.5em;
+  }
+  label {
+    vertical-align: bottom;
+    width: 25%;
+  }
+  input {
+    width: 74%;
+    color: gray;
+    transition: all 250ms;
+    background-color: whitesmoke;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    &:focus {
+      border-bottom: 1px solid rgb(0, 188, 212);
+    }
+  }
+}
