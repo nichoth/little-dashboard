@@ -5,9 +5,18 @@
 
 .page-head {
   margin-top: 0;
+  a.create-domain-item {
+    display: inline-block;
+    font-size: 1rem;
+    float: right;
+    vertical-align: -webkit-baseline-middle;
+    height: 2em;
+    padding-top: 1em;
+  }
 }
 
 .domain-item-list {
+  margin-top: 2em;
   li {
     background-color: whitesmoke;
     margin-bottom: 1em;
