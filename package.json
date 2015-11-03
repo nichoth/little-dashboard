@@ -36,7 +36,6 @@
     "@nichoth/state": "0.0.2",
     "ecstatic": "^1.1.0",
     "form-data-set": "^2.0.0",
-    "keymirror": "^0.1.1",
     "level": "^1.3.0",
     "level-live-stream": "^1.4.11",
     "lodash.foreach": "^3.0.3",
