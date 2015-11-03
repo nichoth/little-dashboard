@@ -3,14 +3,6 @@
 }
 
 .domain-back-button {
-  display: inline-block;
-  background-size: contain;
-  width: 30px;
-  height: 30px;
-  border: none;
-  background-color: transparent;
-  &:hover {
-    opacity: 0.4;
-  }
+  @extend %nav-button;
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACF0lEQVR4XuXb4TEEQRAF4HcRkAkiQAYyQATIgAxkgAjIABmQgRBOBupV7VZtXV0pNzPd/V6Z31bd+7b3pndmbgXfsQ/gGcANgI/WGKvWC4uvY/hXAIcA1gCOAHy1fCZHgGV4Zn4CcNESnte4AQwN7wbAcmfZE4HjDsBt652fr3OpgM3wlwAee8O7VEBYeAeA0PDqAOHhlQFSwqsCpIVXBEgNrwZwBuBhMc8Pm+p+my5V+gC2sgzP8Q3gpOcFZ5f+QAGgLLzCI1AavhqgPHwlgET4KgCZ8BUAUuGzAa4A3FdMdQp9AOf4ednqEwCbnqY1vF3m+L/8bUYfsBmeTQ4XMiVGNIB0+OjvAPnwkQAW4aMAbMJHAFiFHw1gF34UwLxJyemN432a52WmushGaPhWVXZz0NMH2IfvfQQI8AbgYLpr3KriOp7V6KkABrVH6AWYEV4AHE+3nqc1TpX6/cgvweX/5iNw7oYwogKsEUYDEMOqEiIArBCiAGwQIgEsEKIB5BEyALYhsGNsPt05stXMAuBnXu4J8E2RzVI5QiaAJEI2gBxCBYAUQhWADEIlgARCNUA5ggJAKYIKABG4Y8w3yb2p0flXx+Tm5o4HJbnOmIagVAElCIoAhEirBFWANARlgBQEdYBwBAeAUAQXgG0IPHLHn812DScABh2+FecGMBzBEWATgT+wYN/QdPDSFWBG4Kbsdc/a4g8ozaRBx88TeAAAAABJRU5ErkJggg==');
 }

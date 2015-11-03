@@ -7,13 +7,25 @@
   margin-top: 0;
   // margin-bottom: 0.35em;
 
-  a.create-domain-item {
-    display: inline-block;
-    font-size: 1rem;
-    float: right;
-    // vertical-align: -webkit-baseline-middle;
-    height: 2em;
-    padding-top: 1em;
+  // a.create-domain-item {
+  //   display: inline-block;
+  //   font-size: 1rem;
+  //   float: right;
+  //   // vertical-align: -webkit-baseline-middle;
+  //   height: 2em;
+  //   padding-top: 1em;
+  // }
+}
+
+%nav-button {
+  display: inline-block;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  &:hover {
+    opacity: 0.4;
   }
 }
 
@@ -21,5 +33,10 @@ a.nav-button {
   float: right;
   padding: 0;
   margin-top: 0.25em;
-  margin-right: 1.5em;
+  margin-right: 0.6em;
+}
+
+.create-domain-item {
+  @extend %nav-button;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAw0lEQVR4Xu3ZwQ2AMBADQei/aBACiSQNbB5DAwZzXLzmPLrrWqTP4lYS0e9BGWACZgeSaUxEfQKvA3aAHWAHTA4k+ygRtQQtQaeAY1AOEIQkQVFYFBaFReHRgSSWJ6JYAAtgASyABbAAFsACu7DA+iaKn7SZ5pMEGZDZv4GwCQhfglNgl1OgGgITYAJ0gjpBneDgQNJPJqJKUaWoUlQpqhRViipFwRAYAkNgCAyBod+BBMwSUTSIBtEgGkSDaBANbkGDN1tLQD3BEKWsAAAAAElFTkSuQmCC');
 }
