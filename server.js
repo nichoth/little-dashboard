@@ -2,12 +2,12 @@ var ecstatic = require('ecstatic')({root: __dirname + '/public'});
 var http = require('http');
 var fs = require('fs');
 var router = require('routes')();
-
 var shoe = require('shoe');
 var multilevel = require('multilevel');
 
 var db = require('./data/db.js')();
-
+var schema = require('./example/schema.js');
+var createRoutes = require('./lib/create-routes.js');
 
 // router.addRoute('/api/:name', function(req, res, params) {
 //   res.setHeader("Content-Type", "text/html");
@@ -20,17 +20,12 @@ function appRoute(req, res) {
     .pipe(res);
 }
 
-var routes = [
-  '/photos',
-  '/photos/new',
-  '/photos/:id',
-  '/articles',
-  '/articles/new',
-  '/articles/:id',
-  '/videos',
-  '/videos/new',
-  '/videos/:id'
-];
+var routes = schema.reduce(function(acc, item) {
+  createRoutes(item).forEach( function(r) {
+    acc.push(r);
+  } );
+  return acc;
+}, []);
 
 // serve static app at all routes
 routes.forEach(function(routeStr) {
