@@ -3,7 +3,6 @@ var vdom = require('virtual-dom');
 
 var App = require('./lib/App.js');
 
-
 module.exports = function(el, schema) {
 
   var app = App({
