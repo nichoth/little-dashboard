@@ -1,6 +1,5 @@
 var dashboard = require('../');
+var schema = require('./schema.js');
+var rootEl = document.getElementById('content');
 
-dashboard(document.getElementById('content'), {
-  schema: require('./schema.js')
-});
-
+dashboard(rootEl, schema);
