@@ -14,22 +14,18 @@ var createRoutes = require('./lib/create-routes.js');
 //   res.end('you requested ' + params.name);
 // });
 
+// serve the bundle
 function appRoute(req, res) {
   res.setHeader('Content-Type', 'text/html');
   fs.createReadStream('public/index.html')
     .pipe(res);
 }
 
-var routes = schema.reduce(function(acc, item) {
+// add routes to router
+var routes = schema.forEach(function(item) {
   createRoutes(item).forEach( function(r) {
-    acc.push(r);
+    router.addRoute(r, appRoute);
   } );
-  return acc;
-}, []);
-
-// serve static app at all routes
-routes.forEach(function(routeStr) {
-  router.addRoute(routeStr, appRoute);
 });
 
 var server = http.createServer(function(req, res) {
