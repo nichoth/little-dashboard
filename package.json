@@ -60,7 +60,7 @@
     "shoe": "0.0.15",
     "slug": "https://github.com/nichoth/node-slug/tarball/master",
     "title-case": "^1.1.1",
-    "vdom-components": "0.0.1",
+    "vdom-components": "0.0.2",
     "vdom-form": "0.0.5",
     "vdom-form-field": "0.0.7",
     "vdom-input": "0.0.8",
