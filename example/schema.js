@@ -9,9 +9,7 @@ module.exports = [
       thumbnail: curry( require('vdom-components/FileUpload'), {
         label: 'Thumbnail'
       }),
-      url: 'string',
-      author: 'string',
-      date: 'date'
+      url: 'string'
     }
   },
   {
