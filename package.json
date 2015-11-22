@@ -42,6 +42,7 @@
   "dependencies": {
     "@nichoth/router": "0.0.2",
     "@nichoth/state": "0.0.2",
+    "async-each": "^0.1.6",
     "concat-stream": "^1.5.1",
     "ecstatic": "^1.1.0",
     "filereader-stream": "^1.0.0",
@@ -62,7 +63,7 @@
     "shoe": "0.0.15",
     "slug": "https://github.com/nichoth/node-slug/tarball/master",
     "title-case": "^1.1.1",
-    "vdom-components": "0.0.5",
+    "vdom-components": "0.0.7",
     "vdom-sidebar": "0.0.6",
     "virtual-dom": "^2.1.1",
     "xtend": "^4.0.0"
