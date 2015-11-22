@@ -5,7 +5,7 @@ var router = require('routes')();
 var shoe = require('shoe');
 var multilevel = require('multilevel');
 
-var db = require('./data/db.js')();
+var db = require('./example/data/db.js')();
 var schema = require('./example/schema.js');
 var createRoutes = function(item) {
   return [
