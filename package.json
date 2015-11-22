@@ -40,7 +40,7 @@
     "watchify": "^3.6.0"
   },
   "dependencies": {
-    "@nichoth/router": "0.0.0",
+    "@nichoth/router": "0.0.2",
     "@nichoth/state": "0.0.2",
     "concat-stream": "^1.5.1",
     "ecstatic": "^1.1.0",
