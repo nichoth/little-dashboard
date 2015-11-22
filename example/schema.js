@@ -7,15 +7,24 @@ module.exports = [
     itemName: 'video',
     itemNamePlural: 'videos',
     fields: {
-      title: curry(FormField, {
-        field: 'Title'
-      }),
-      thumbnail: curry(FileUpload, {
-        label: 'Thumbnail'
-      }),
-      url: curry(FormField, {
-        field: 'Url'
-      })
+      title: {
+        args: {
+          field: 'Title'
+        },
+        component: FormField
+      },
+      thumbnail: {
+        args: {
+          label: 'Thumbnail'
+        },
+        component: FileUpload
+      },
+      url: {
+        args: {
+          field: 'Url'
+        },
+        component: FormField
+      }
     }
   },
   // {
