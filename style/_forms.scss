@@ -14,14 +14,28 @@ button:disabled {
   padding: 1em;
 }
 
-.vdom-file-upload {
+.vdom-image-upload {
   input[type="file"] {
     font-size: 1em;
     border-bottom: none;
   }
+  img {
+    max-height: 100px;
+  }
 }
 
-.vdom-form-field, .vdom-file-upload {
+// .vdom-file-upload-label {
+//   letter-spacing: 0.03em;
+//   font-weight: 100;
+//   vertical-align: bottom;
+//   width: 25%;
+// }
+
+.vdom-form-field, .vdom-image-upload, .vdom-file-upload {
+  & .vdom-file-upload {
+    padding: 0;
+    margin-bottom: 0;
+  }
   padding: 1em;
   background-color: whitesmoke;
   margin-bottom: 1em;

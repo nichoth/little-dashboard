@@ -1,5 +1,6 @@
 var FormField = require('vdom-components/Form/FormField');
 var FileUpload = require('vdom-components/Form/FileUpload');
+var ImageUpload = require('vdom-components/Form/ImageUpload');
 
 var fields = {
   title: {
@@ -12,7 +13,7 @@ var fields = {
     args: {
       field: 'Thumbnail'
     },
-    component: FileUpload
+    component: ImageUpload
   },
   url: {
     args: {
