@@ -2,15 +2,44 @@ var createKey = require('./create-key.js');
 var shasum = require('shasum');
 var reduce = require('lodash.reduce');
 var extend = require('xtend');
+var map = require('lodash.map');
 
 module.exports = function(db) {
 
-  function createWithAttachment(key, data, file) {
-    var s = shasum(file);
-    db.batch([
-      { type: 'put', key: key, value: { data: extend(data, {file: s}) } },
-      { type: 'put', key: s, value: file, valueEncoding: 'binary' },
-    ]);
+  function createWithAttachment(key, data, files) {
+
+    var fs = reduce(files, function(acc, buffer, k) {
+      acc[k] = {
+        hash: shasum(buffer),
+        value: buffer
+      };
+      return acc;
+    }, {});
+
+    // put the attachments
+    var ops = map(fs, function(f) {
+      return {
+        type: 'put',
+        key: f.hash,
+        value: f.value,
+        valueEncoding: 'binary'
+      };
+    });
+
+    // put the main thing
+    ops.push({
+      type: 'put',
+      key: key,
+      value: {
+        data: data,
+        attachments: map(fs, function(f) {
+          return f.hash;
+        })
+      }
+    });
+
+    console.log(ops);
+    db.batch(ops);
   }
 
   return {
@@ -37,10 +66,12 @@ module.exports = function(db) {
     create: function (domain, newData) {
       var key = createKey(domain, newData);
 
+      console.log('save a thing', newData);
+
       // attachment
       if (newData.attachments) {
-        var d = newData.data;
-        return createWithAttachment(key, d, newData.attachments.thumbnail);
+        createWithAttachment(key, newData.data, newData.attachments);
+        return;
       }
 
       // no attachment
